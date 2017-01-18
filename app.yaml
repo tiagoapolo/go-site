@@ -1,6 +1,7 @@
+application: contax
+version: 1
 runtime: go
 api_version: go1
-version: 002
 
 handlers:
 - url: /.*
