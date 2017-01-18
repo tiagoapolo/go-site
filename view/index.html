@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta name="description" content="Gestão,Financeiro,Água,Luz,Gás,atraso">
+    <meta name="keywords" content="Nunca mais pague contas com atraso">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Contas Box</title>
+
+    <!-- CSS  -->
+    <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" sizes="16x16" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link href="assets/css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="assets/css/dropzone.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'></script>
+    <script>
+      var OneSignal = window.OneSignal || [];
+      OneSignal.push(["init", {
+        appId: "46154141-a77a-459a-8d8a-24688c4cf063",
+        autoRegister: false, /* Set to true to automatically prompt visitors */
+        subdomainName: 'contasbox',
+        safari_web_id: 'web.onesignal.auto.56dcd4fd-a138-4c52-be69-7f4de2370515',
+
+        httpPermissionRequest: {
+          enable: true
+        },
+        notifyButton: {
+            enable: false /* Set to false to hide */
+        }
+      }]);
+
+      function subscribe() {
+            OneSignal.push(["registerForPushNotifications"]);
+            event.preventDefault();
+        }
+
+        var OneSignal = OneSignal || [];
+        /* This example assumes you've already initialized OneSignal */
+        OneSignal.push(function() {
+            // If we're on an unsupported browser, do nothing
+            if (!OneSignal.isPushNotificationsSupported()) {
+                return;
+            }
+            OneSignal.isPushNotificationsEnabled(function(isEnabled) {
+                if (isEnabled) {
+                    // The user is subscribed to notifications
+                    // Don't show anything
+                } else {
+                    document.getElementById("subscribe-link").addEventListener('click', subscribe);
+                    document.getElementById("subscribe-link").style.display = '';
+                }
+            });
+        });
+    </script>
+    <!-- Start of Async Drift Code -->
+    <script>
+        ! function() {
+            var t;
+            if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void(window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+                t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                t.factory = function(e) {
+                    return function() {
+                        var n;
+                        return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+                    };
+                }, t.methods.forEach(function(e) {
+                    t[e] = t.factory(e);
+                }), t.load = function(t) {
+                    var e, n, o, i;
+                    e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+                        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
+                        n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+                });
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('dfd5d63mnk9z');
+    </script>
+    <!-- End of Async Drift Code -->
+    <!-- start Mixpanel -->
+    <script type="text/javascript">
+        (function(e, a) {
+            if (!a.__SV) {
+                var b = window;
+                try {
+                    var c, l, i, j = b.location,
+                        g = j.hash;
+                    c = function(a, b) {
+                        return (l = a.match(RegExp(b + "=([^&]*)"))) ? l[1] : null
+                    };
+                    g && c(g, "state") && (i = JSON.parse(decodeURIComponent(c(g, "state"))), "mpeditor" === i.action && (b.sessionStorage.setItem("_mpcehash", g), history.replaceState(i.desiredHash || "", e.title, j.pathname + j.search)))
+                } catch (m) {}
+                var k, h;
+                window.mixpanel = a;
+                a._i = [];
+                a.init = function(b, c, f) {
+                    function e(b, a) {
+                        var c = a.split(".");
+                        2 == c.length && (b = b[c[0]], a = c[1]);
+                        b[a] = function() {
+                            b.push([a].concat(Array.prototype.slice.call(arguments,
+                                0)))
+                        }
+                    }
+                    var d = a;
+                    "undefined" !== typeof f ? d = a[f] = [] : f = "mixpanel";
+                    d.people = d.people || [];
+                    d.toString = function(b) {
+                        var a = "mixpanel";
+                        "mixpanel" !== f && (a += "." + f);
+                        b || (a += " (stub)");
+                        return a
+                    };
+                    d.people.toString = function() {
+                        return d.toString(1) + ".people (stub)"
+                    };
+                    k =
+                        "disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user"
+                        .split(" ");
+                    for (h = 0; h < k.length; h++) e(d, k[h]);
+                    a._i.push([b, c, f])
+                };
+                a.__SV = 1.2;
+                b = e.createElement("script");
+                b.type = "text/javascript";
+                b.async = !0;
+                b.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === e.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ?
+                    "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+                c = e.getElementsByTagName("script")[0];
+                c.parentNode.insertBefore(b, c)
+            }
+        })(document, window.mixpanel || []);
+        mixpanel.init("98fcb0ced8cdef265d4d19fb31b9d5c1");
+    </script>
+    <!-- end Mixpanel -->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-89789069-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- google-analytics -->
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '101500626994681', {
+    em: 'insert_email_variable,'
+    });
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=101500626994681&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+</head>
+
+<body>
+    <!-- start preloader-->
+    <div class="preloader">
+        <div class="sk-spinner sk-spinner-rotating-plane"></div>
+    </div>
+    <!-- end preloader -->
+
+    <div class="section no-pad-bot hero" id="index-banner">
+      <div class="overlay">
+        <div class="navbar-fixed">
+            <nav id="header-nav" class="navbar blue darken-3 noShadow" role="navigation">
+                <div class="nav-wrapper container"><a id="logo-container" href="http://www.contasbox.com" class="brand-logo">Contas Box</a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a data-scroll href="#analysis">Como Funciona</a></li>
+                        <li><a data-scroll href="#features">Funcionalidades</a></li>
+                        <li><a data-scroll href="#price-plans">Preço</a></li>
+                        <li><a data-scroll href="#contactus">Contato</a></li>
+                        <!-- <li><a href="#">Blog</a></li> -->
+                    </ul>
+                    <!-- Dropdown Trigger -->
+                    <!-- Mobile -->
+                    <ul id="nav-mobile" class="side-nav">
+                        <!-- <li><a href="#">Blog</a></li> -->
+                        <li><a data-scroll href="#analysis">Como Funciona</a></li>
+                        <li><a data-scroll href="#features">Funcionalidades</a></li>
+                        <li><a data-scroll href="#price-plans">Preço</a></li>
+                        <li><a data-scroll href="#contactus">Contato</a></li>
+                    </ul>
+                    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                </div>
+            </nav>
+        </div>
+        <div class="row header-content">
+            <div class="col m6 offset-m1 s12">
+                <h2 class="header white-text">
+                  <span class="typo"></span>contas
+                  <br>não precisa ser
+                  <br>complicado
+                </h2>
+                <h5 class="header white-text light"><strong>Administre</strong> suas contas facilmente</h5>
+                <div class="padding-icons">
+                    <a data-scroll href="#analysis" id="goto-about" class="btn-large no-uppercase waves-effect waves-light blue darken-3">Entenda mais</a>
+                    <a data-scroll href="#register" id="goto-reg" class="btn-large no-uppercase waves-effect waves-light blue darken-4">Cadastre-se</a>
+                </div>
+            </div>
+        </div>
+        <br><br>
+      </div>
+    </div>
+    <div class="section no-pad-bot div-register" id="">
+        <div class="container">
+            <div class="row">
+                <div class="col m12 s12 register-text-light">
+                    <h5 class="col m6 blue-text text-darken-4"><strong>Sistema simples e eficiente</strong> para você organizar suas finanças.</h5>
+                    <p class="col m6 blue-grey-text">O Contas Box é um sistema de gestão de gastos que te ajudará a nunca mais atrasar suas contas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section no-pad-bot process-div" id="analysis">
+        <div class="container">
+            <div class="row padding-40 caract">
+                <div class="col s12 m4 center-align">
+                    <img class="analysis-img" src="assets/img/number-1.png" />
+                    <h5 class="center indigo-text text-darken-4"><strong>Pague as contas</strong></h5>
+                    <p class="center">Pague normalmente suas contas através do seu banco.</p>
+                </div>
+                <div class="col s12 m4 center-align">
+                    <img class="analysis-img" src="assets/img/number-2.png" />
+                    <h5 class="center indigo-text text-darken-4"><strong>Envie o comprovante</strong></h5>
+                    <p class="center">Envie o comprovante do pagamento ou da transferência para nós.</p>
+                </div>
+                <div class="col s12 m4 center-align">
+                    <img class="analysis-img" src="assets/img/number-3.png" />
+                    <h5 class="center indigo-text text-darken-4"><strong>Pronto!</strong></h5>
+                    <p class="center">Todo mês te avisamos quando suas contas estiverem perto de vencer e te ajudamos a poupar.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row">
+              <h5 style="padding-bottom: 20px;" class="blue-grey-text center">Teste agora</h5>
+              <div style="padding-bottom: 30px;" class="col m6 offset-m3 s12">
+                <form id="uploadero" class="dropzone center">
+                </form>
+              </div>
+              <div id="mod1" class="modal">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-light btn-flat transparent"><strong class="grey-text">X</strong></a>
+                  <div class="modal-content">
+                      <h5 class="center">Seu email</h5>
+                      <form id="contact-form" action="//formspree.io/tiago@contasbox.com" method="post" class="">
+                          <!-- <div class="row"> -->
+                          <div class="col m10 offset-m2 s12">
+                            <p class="light-txt"><strong>Cadastre seu email para que possamos te lembrar.</strong>
+                              <br>Não enviamos qualquer tipo de spam
+                            </p>
+                          </div>
+                          <div class="input-field col m8 s12">
+                              <i class="mdi-content-mail prefix"></i>
+                              <input type="email" name="Email" class="validate" required>
+                              <label for="email">Email</label>
+                          </div>
+                          <!-- </div> -->
+                          <!-- CONFIG -->
+                          <input type="hidden" name="_subject" value="Subject">
+                          <input type="hidden" name="_cc" value="tiago@contasbox.com">
+                          <!-- /CONFIG -->
+                          <p class="col m4 s12 right-align-mod register-button"><button id="agora" class="no-uppercase btn waves-effect blue darken-4 waves-light submit" type="submit" value="Send">Cadastrar</button></p>
+                      </form>
+                  </div>
+                  <br>
+                  <br>
+                  <br>
+                  <div class="modal-footer">
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="section no-pad-bot div-grow-feature blue-grey-text" id="title-features">
+        <h5 class="center blue-grey-text darken-2 light-txt">O que fazemos para facilitar sua vida</h5>
+        <h6 class="center blue-grey-text darken-2 light-txt">Mas também cuidar do seu bolso</h6>
+        <br>
+        <div class="row padding-40 valign-wrapper" id="features">
+            <div class="container">
+                <div class="col m4 s12 center-align valign feature">
+                    <img class="feature-img ftr-pad" src="assets/img/receipt.png" />
+                    <h6><strong>Comprovantes e contas</strong></h6>
+                    <p class="light-txt">Armazenamos todos seus comprovantes e contas na sua &ldquo;Box&rdquo; para facilitar a organização.</p>
+                </div>
+                <div class="col m4 s12 center-align valign feature">
+                    <img class="feature-img ftr-pad" id="" src="assets/img/porco.png" />
+                    <h6><strong>Economize</strong></h6>
+                    <p class="light-txt">Descubra como poupar com nosso ajudante financeiro inteligente.</p>
+                </div>
+                <div class="col m4 s12 center-align valign feature">
+                    <img class="feature-img ftr-pad" src="assets/img/notification.png" /></a>
+                    <h6><strong>Notificações</strong></h6>
+                    <p class="light-txt">Alertas sobre contas próximas a data de vencimento e com valor acima do normal.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row padding-40 valign-wrapper">
+            <div class="container">
+                <div class="col m4 s12 center-align valign feature">
+                    <img class="feature-img ftr-pad" src="assets/img/calendar.png" />
+                    <h6><strong>Calendário</strong></h6>
+                    <p class="light-txt">Sincronizamos com seu <i>Google Calendar</i> ou <i>iCalendar</i> para te lembrar das datas de vencimento, evitando juros e multas.</p>
+                </div>
+                <div class="col m4 s12 center-align valign feature">
+                    <img class="feature-img ftr-pad" src="assets/img/graph.png" />
+                    <h6><strong>Histórico</strong></h6>
+                    <p class="light-txt">Gráficos e informações sobre os valores das suas contas passadas.<br>Ex.: Consumo água e luz do mês anterior.</p>
+                </div>
+                <div class="col m4 s12 center-align valign feature">
+                    <img class="feature-img ftr-pad" src="assets/img/pie.png" />
+                    <h6><strong>Contas por categoria</strong></h6>
+                    <p class="light-txt">Mostramos suas contas separadas por categoria para que seja mais fácil analisar de onde vem seus gastos.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row padding-40 valign-wrapper">
+            <div class="container">
+                <div class="col m4 offset-m4 s12 center-align valign feature">
+                    <img class="feature-img ftr-pad" src="assets/img/lock.png" />
+                    <h6><strong>Segurança</strong></h6>
+                    <p class="light-txt">Seus dados estarão sempre em sigilo por criptografias 128-Bit, suas informações sensíveis bancárias nunca passam por nossos sistemas e nem as armazenamos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="section no-pad-bot div-price" id="register">
+        <div class="row">
+            <div class="container">
+                <h5 class="center blue-text text-darken-4">Veja como é fácil <strong>controlar</strong> suas <strong>contas</strong>.</h5>
+                <br>
+                <div id="price-plans"></div>
+                <br>
+                <div id="plans-table" class="valign-wrapper">
+                    <div id="plan-1" class='col m4 s12 package valign'>
+                        <div class='name'>Grátis</div>
+                        <div class='price'>R$0</div>
+                        <div class='trial'>Totalmente gratuito</div>
+                        <hr>
+                        <ul class="uele">
+                            <li>
+                                <strong>1</strong> usuário
+                            </li>
+                            <li class="">
+                                Integração com calendários
+                            </li>
+                            <li>
+                                Notificações de vencimento
+                            </li>
+                            <li class="gratis">
+                                Notificações de conta alta
+                            </li>
+                            <li class="gratis">
+                                Salvar comprovantes e contas
+                            </li>
+                            <li class="gratis">
+                                Ajudante financeiro inteligente
+                            </li>
+                            <li class="gratis">
+                                Histórico e categoria de gastos
+                            </li>
+                            <li class="signup-button">
+                                <div class=''><a href="http://www.contasbox.com/subscribe.html" class="no-uppercase waves-effect waves-light btn blue darken-3">Inicie agora</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="plan-2" class='col m4 s12 package brilliant valign'>
+                        <div class='name'>Premium</div>
+                        <div class='price'>R$3,90</div>
+                        <div class='trial'>30 dias grátis</div>
+                        <hr>
+                        <ul class="uele">
+                            <li>
+                                <strong>1</strong> usuário
+                            </li>
+                            <li>
+                                Integração com calendários
+                            </li>
+                            <li>
+                                Notificações de vencimento
+                            </li>
+                            <li>
+                                Notificações de conta alta
+                            </li>
+                            <li>
+                                Salvar comprovantes e contas
+                            </li>
+                            <li>
+                                Ajudante financeiro inteligente
+                            </li>
+                            <li>
+                                Histórico e categoria de gastos
+                            </li>
+                            <li class="signup-button">
+                                <div class=''><a href="http://www.contasbox.com/subscribe.html" class="no-uppercase waves-effect waves-light btn blue darken-3">Inicie agora</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="plan-3" class='col m4 s12 package valign'>
+                        <div class='name'>Família</div>
+                        <div class='price'>R$10,90</div>
+                        <div class='trial'>30% Desconto</div>
+                        <hr>
+                        <ul class="uele">
+                            <li>
+                                <strong>3</strong> usuários
+                            </li>
+                            <li>
+                                Integração com calendários
+                            </li>
+                            <li>
+                                Notificações de vencimento
+                            </li>
+                            <li>
+                                Notificações de conta alta
+                            </li>
+                            <li>
+                                Salvar comprovantes e contas
+                            </li>
+                            <li>
+                                Ajudante financeiro inteligente
+                            </li>
+                            <li>
+                                Histórico e categoria de gastos
+                            </li>
+                            <li class="signup-button">
+                                <div class=''><a href="http://www.contasbox.com/subscribe.html" class="no-uppercase waves-effect waves-light btn blue darken-3">Inicie agora</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <p class="center grey-text">* cobrado anualmente</p> -->
+            </div>
+        </div>
+    </div>
+    <footer id="contactus" class="page-footer grey darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Contate-nos</h5>
+                    <p class="grey-text text-lighten-4"><strong class="blue-text">Email:</strong> tiago@contasbox.com</p>
+                    <p class="grey-text text-lighten-4"><strong class="blue-text">Skype:</strong> Contas Box Contato</p>
+                    <p class="grey-text text-lighten-4"><strong class="blue-text">Endereço:</strong> R. Fernando Simas, 95, Curitiba - PR</p>
+                    <p class="white-text">Feito em Curitiba com <i class="material-icons bycuritiba">favorite_border</i></p>
+                </div>
+                <div class="col l3 offset-l3 s12">
+                    <h5 class="white-text">Mapa do site</h5>
+                    <ul>
+                        <li><a class="white-text" href="http://www.contasbox.com">Inicio</a>
+                            <!-- <li><a class="white-text" href="http://blog.uniosmart.com">Blog</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright made-by-color">
+            <div class="container">
+                © Contas Box Online. Todos os direitos reservados.
+                <!-- <a class="" href="#"><img class="made-by-img" src="assets/img/box.png" /></a> -->
+            </div>
+        </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- <script src="js/materialize.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/dropzone.js"></script>
+    <script src="js/typed.js"></script>
+
+</body>
+
+</html>

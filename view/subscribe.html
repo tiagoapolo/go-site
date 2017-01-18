@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta name="description" content="Gestão,Água,Luz,Gás">
+    <meta name="keywords" content="Cuidamos das suas contas para que você se cuide do seu negócio">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Contas Box</title>
+
+    <!-- CSS  -->
+    <link rel="icon" type="image/png" href="assets/assets/img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="assets/assets/img/favicon-16x16.png" sizes="16x16" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0px;
+        }
+
+        .hero-bck {
+            height: 100%;
+            background-color: #fafafa;
+        }
+
+        footer.page-footer {
+            padding-top: 0px;
+        }
+
+        .footer {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 0rem;
+        }
+
+        .header-content {
+            padding-top: 3rem;
+            /* padding-bottom: 6rem; */
+            overflow-x: hidden;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        @media (max-width: 600px){
+          .right-align-mod{
+            text-align: right !important;
+          }
+        }
+
+        .mail-reg {
+            font-weight: 400 !important;
+        }
+    </style>
+
+    <!-- Start of Async Drift Code -->
+    <script>
+        ! function() {
+            var t;
+            if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void(window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+                t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                t.factory = function(e) {
+                    return function() {
+                        var n;
+                        return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+                    };
+                }, t.methods.forEach(function(e) {
+                    t[e] = t.factory(e);
+                }), t.load = function(t) {
+                    var e, n, o, i;
+                    e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+                        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
+                        n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+                });
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('dfd5d63mnk9z');
+    </script>
+    <!-- End of Async Drift Code -->
+    <!-- start Mixpanel -->
+    <script type="text/javascript">
+        (function(e, a) {
+            if (!a.__SV) {
+                var b = window;
+                try {
+                    var c, l, i, j = b.location,
+                        g = j.hash;
+                    c = function(a, b) {
+                        return (l = a.match(RegExp(b + "=([^&]*)"))) ? l[1] : null
+                    };
+                    g && c(g, "state") && (i = JSON.parse(decodeURIComponent(c(g, "state"))), "mpeditor" === i.action && (b.sessionStorage.setItem("_mpcehash", g), history.replaceState(i.desiredHash || "", e.title, j.pathname + j.search)))
+                } catch (m) {}
+                var k, h;
+                window.mixpanel = a;
+                a._i = [];
+                a.init = function(b, c, f) {
+                    function e(b, a) {
+                        var c = a.split(".");
+                        2 == c.length && (b = b[c[0]], a = c[1]);
+                        b[a] = function() {
+                            b.push([a].concat(Array.prototype.slice.call(arguments,
+                                0)))
+                        }
+                    }
+                    var d = a;
+                    "undefined" !== typeof f ? d = a[f] = [] : f = "mixpanel";
+                    d.people = d.people || [];
+                    d.toString = function(b) {
+                        var a = "mixpanel";
+                        "mixpanel" !== f && (a += "." + f);
+                        b || (a += " (stub)");
+                        return a
+                    };
+                    d.people.toString = function() {
+                        return d.toString(1) + ".people (stub)"
+                    };
+                    k =
+                        "disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user"
+                        .split(" ");
+                    for (h = 0; h < k.length; h++) e(d, k[h]);
+                    a._i.push([b, c, f])
+                };
+                a.__SV = 1.2;
+                b = e.createElement("script");
+                b.type = "text/javascript";
+                b.async = !0;
+                b.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === e.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ?
+                    "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+                c = e.getElementsByTagName("script")[0];
+                c.parentNode.insertBefore(b, c)
+            }
+        })(document, window.mixpanel || []);
+        mixpanel.init("98fcb0ced8cdef265d4d19fb31b9d5c1");
+    </script>
+    <!-- end Mixpanel -->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-89789069-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- google-analytics -->
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '101500626994681', {
+    em: 'insert_email_variable,'
+    });
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=101500626994681&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+</head>
+
+<body>
+
+    <div class="section no-pad-bot hero-bck" id="index-banner">
+        <div class="navbar-fixed">
+            <nav id="header-nav" class="navbar blue darken-3 noShadow" role="navigation">
+                <div class="nav-wrapper container"><a id="logo-container" href="http://www.contasbox.com" class="brand-logo">Contas Box</a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a data-scroll href="http://www.contasbox.com">Inicio</a></li>
+                        <!-- <li><a href="#">Blog</a></li> -->
+                    </ul>
+                    <!-- Dropdown Trigger -->
+                    <!-- Mobile -->
+                    <ul id="nav-mobile" class="side-nav">
+                        <li><a data-scroll href="http://www.contasbox.com">Inicio</a></li>
+                        <!-- <li><a href="#">Blog</a></li> -->
+                    </ul>
+                    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                </div>
+            </nav>
+        </div>
+        <div class="row header-content">
+
+            <div class="row">
+                <!-- <div class="container"> -->
+                    <div class="col m1 s12">
+                      <img class="subs-app" src="assets/img/iphone.png" />
+                    </div>
+                    <div class="col m6 offset-m2 s12 ">
+                        <div class="row">
+                            <h5 class="center blue-text text-darken-4">Olá! Ainda estamos finalizando.</h5>
+                            <p class="blue-grey-text darken-2 light-txt">
+                                Nós estamos trabalhando duro dando os últimos ajustes na Box. As coisas estão indo super bem e logo logo estaremos prontos para te ajudar com suas contas e seu financeiro.
+                                <br><br>
+                                <strong class="mail-reg">Se quiser, te avisamos assim que ficar pronto, apenas cadastre seu email abaixo.</strong>
+                            </p>
+                            <form id="contact-form" action="//formspree.io/tiago@contasbox.com" method="post" class="">
+                                <!-- <div class="row"> -->
+                                <div class="input-field col m8 s12">
+                                    <i class="mdi-content-mail prefix"></i>
+                                    <input type="email" name="Email" class="validate" required>
+                                    <label for="email">Email</label>
+                                </div>
+                                <!-- </div> -->
+                                <!-- CONFIG -->
+                                <input type="hidden" name="_subject" value="Subject">
+                                <input type="hidden" name="_cc" value="tiago@contasbox.com">
+                                <!-- /CONFIG -->
+                                <p class="col m4 s12 right-align-mod register-button"><button class="no-uppercase btn waves-effect blue darken-4 waves-light submit" type="submit" value="Send">Cadastrar</button></p>
+                            </form>
+                        </div>
+                    </div>
+                <!-- </div> -->
+            </div>
+
+        </div>
+        <div class="footer">
+            <footer class="page-footer grey darken-3">
+                <div class="footer-copyright made-by-color">
+                    <div class="container center">
+                        © Contas Box Online. Todos os direitos reservados.
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/subs.js"></script>
+    <script>
+        $(document).ready(function() {
+            smoothScroll.init({
+                offset: 64
+            });
+        });
+
+        var $contactForm = $('#contact-form');
+        $contactForm.submit(function(e) {
+            e.preventDefault();
+            $.ajax({
+                url: '//formspree.io/tiago@contasbox.com',
+                method: 'POST',
+                data: $('#contact-form').serialize(),
+                dataType: 'json',
+                beforeSend: function() {
+                    $contactForm.append('<div class="col m4 s12 right-align alert alert--loading">Cadastrando…</div>');
+                },
+                success: function(data) {
+                    $contactForm.find('.alert--loading').hide();
+                    $contactForm.append('<div class="col m4 s12 right-align alert alert--success">Pronto!</div>');
+                    $('.alert--success').delay(3000).fadeOut();
+                },
+                error: function(err) {
+                    $contactForm.find('.alert--loading').hide();
+                    $contactForm.append('<div class="col m4 s12 right-align alert alert--error">Ops...Ocorreu um erro.</div>');
+                    $('.alert--error').delay(2000).fadeOut();
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
