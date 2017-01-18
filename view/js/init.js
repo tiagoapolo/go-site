@@ -59,7 +59,7 @@
 
 
     var myDropzone = new Dropzone("#uploadero", {
-      url: "http://108.59.84.186/contax/upload",
+      url: "https://108.59.84.186/contax/upload",
       method: "post",
       acceptedFiles: "image/jpeg,application/pdf,image/png",
       autoProcessQueue:false
